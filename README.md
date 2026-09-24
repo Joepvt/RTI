@@ -148,14 +148,25 @@ The production assets will be built to the `dist/` directory.
 
 ## 📸 Screenshots
 
-<!-- Replace with actual screenshots of your running app -->
-| Home Landing & Question Input | Step 1: Contextual Clarifications |
-|:---:|:---:|
-| ![Home Screen](https://via.placeholder.com/600x400?text=Home+Screen) | ![Clarification](https://via.placeholder.com/600x400?text=Clarification+Step) |
+### 1. Plain-Language Question Input
+![Home Screen](docs/screenshots/home.png)
+*Landing screen featuring ordinary-language prompt, quick-start sample scenarios, and 1-click demo.*
 
-| Step 3: Public Authority Match | Step 4: Generated RTI Document |
-|:---:|:---:|
-| ![Authority Match](https://via.placeholder.com/600x400?text=Authority+Match) | ![Generated RTI](https://via.placeholder.com/600x400?text=Generated+RTI) |
+### 2. Contextual Clarification Wizard
+![Clarification & Question Understanding](docs/screenshots/rti-guidance.png)
+*Guided clarification cards that hone request scope without requesting intrusive personal details.*
+
+### 3. Public Authority Matching & Rationale
+![Authority Match](docs/screenshots/authority-match.png)
+*Automatic public authority identification with confidence rating and transparent jurisdictional reasoning.*
+
+### 4. Structured Point-Wise RTI Draft & Inline Editor
+![Generated RTI Draft](docs/screenshots/application.png)
+*Point-wise legal record request focusing strictly on existing ledgers, work orders, and inspection reports.*
+
+### 5. Local Draft Management ("My Requests")
+![Saved Requests Management](docs/screenshots/tracking.png)
+*100% private client-side storage to review, copy, export, and manage saved RTI drafts.*
 
 ---
 
