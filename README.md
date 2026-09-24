@@ -213,8 +213,15 @@ The production assets will be built to the `dist/` directory.
 
 ---
 
+## 👤 Author
+
+Developed by **Karthikeya** ([@Joepvt](https://github.com/Joepvt))
+
+---
+
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 *RTI Easy is created for educational and portfolio demonstration purposes.*
+

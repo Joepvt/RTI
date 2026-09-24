@@ -10,9 +10,9 @@
     "electron:start": "electron electron/main.cjs"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Karthikeya",
+  "license": "MIT",
+  "description": "An independent civic-tech web & desktop app to easily draft structured RTI requests under the RTI Act, 2005.",
   "dependencies": {
     "lucide-react": "^1.47.0",
     "react": "^19.3.0",
