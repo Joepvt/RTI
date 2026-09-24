@@ -1,164 +1,107 @@
 # RTI Easy
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Electron](https://img.shields.io/badge/Electron-Desktop-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+RTI Easy is a project I built to make drafting Right to Information (RTI) applications in India easier. You describe what you want to know in normal everyday words, answer a few quick questions, and the app helps you prepare a formatted draft asking for specific government records. It works in the browser and can also run as a desktop app.
 
-A simple web and desktop app that helps you draft Right to Information (RTI) applications in India. You type what you want to ask in plain English, and the app turns it into a structured, point-wise request asking for official government records.
+## Why I Built This
 
----
+I am a first-year computer science student. When I first looked into filing an RTI, I realized how confusing it can be for someone doing it for the first time.
 
-## What is this?
+Most people don't know which department handles their problem (for example, whether a broken street is under the city corporation or the state PWD). Also, people usually ask questions like *"Why is this road still broken?"*, but under the RTI Act, government offices only have to provide existing records (like bills, contracts, and inspection reports), not explanations or opinions. I built this to help people turn everyday questions into clear requests for real documents without having to worry about legal formatting.
 
-I am a first-year computer science student. While learning about civic rights and web development, I wanted to build a practical project that solves a real problem.
+## What It Does
 
-The **Right to Information (RTI) Act, 2005** is a great tool for transparency, but writing an application can be confusing for a beginner:
-- Most people don't know which department handles their issue (for example, whether a road is managed by the city municipality or the state PWD).
-- People often ask questions like *"Why is this road still broken?"* or *"Who is responsible?"*. Under Section 2(f) of the RTI Act, Public Information Officers (PIOs) only have to provide **existing records**, not explanations or opinions.
-- Figuring out the legal formatting and letter layout takes extra effort.
-
-I built RTI Easy to make this process less intimidating. You describe what happened in normal everyday language, answer a couple of quick questions, and the app gives you a formatted Section 6(1) letter asking for concrete records (like work orders, sanction amounts, and inspection reports) that you can print out or copy.
-
----
-
-## Features
-
-- **Plain-English Input**: Type your question normally, or click one of the pre-made sample questions (road repairs, school funds, streetlights, etc.).
-- **Guided Follow-up Questions**: Asks 1 to 3 quick multiple-choice questions depending on the topic to narrow down the details.
-- **Department Suggestions**: Matches your request against common public authorities (Municipal Corporations, PWD, Electricity Boards, Police, Education Department, etc.) and suggests which office to address.
-- **Editable Draft Generator**: Generates numbered, point-wise requests for specific documents (work orders, bills, inspection reports). You can edit any point, add new points, or delete points.
-- **Print & PDF Layout**: Clean layout styled for A4 printing via your browser or desktop print dialog (*Print → Save as PDF*), plus a button to copy the plain text.
-- **Saved Drafts ("My Requests")**: Saves your drafts locally in your browser's `localStorage` so you can return to them later without losing your work.
-- **Runs on Web and Desktop**: Works in the browser and can also be run as a standalone desktop window using Electron.
-
----
+- **Plain-English input**: Type what you want to know in regular words, or pick one of the sample topics (like road repairs or school funds).
+- **Follow-up questions**: Asks 1 to 3 simple questions based on your topic to help narrow down what records you need.
+- **Department suggestion**: Matches your topic against common public authorities (Municipal Corporations, PWD, Electricity Boards, Police, etc.) and suggests which one to send the request to.
+- **Editable draft**: Creates a numbered list of requests for specific documents. You can edit the text, add new points, or delete points directly in the app.
+- **Print and export**: Formats everything into a standard Section 6(1) letter layout that you can print, save as PDF, or copy as text.
+- **Saved drafts**: Saves your drafts locally in your browser so you can come back to them later without losing your progress.
+- **Desktop version**: Can run as a standalone desktop app using Electron in addition to running in the browser.
 
 ## Screenshots
 
-### 1. Home Screen & Question Input
+### Home Screen
 ![Home Screen](docs/screenshots/home.png)
-*Start with a question in normal language or pick a sample topic.*
 
-### 2. Clarification Questions
+### Follow-up Questions
 ![Clarification Questions](docs/screenshots/rti-guidance.png)
-*Quick multiple-choice options to clarify the scope of your request.*
 
-### 3. Authority Suggestion
+### Suggested Department
 ![Authority Suggestion](docs/screenshots/authority-match.png)
-*Suggested public authority with a simple explanation of why it fits.*
 
-### 4. Review & Edit Draft
+### Review & Edit Draft
 ![Review & Edit Draft](docs/screenshots/application.png)
-*Structured point-wise RTI application that you can edit inline before printing.*
 
-### 5. Saved Requests
+### Saved Requests
 ![Saved Requests](docs/screenshots/tracking.png)
-*Locally saved drafts to reopen, edit, or copy anytime.*
-
----
 
 ## Built With
 
-- **React 19** - UI components and multi-step wizard state
-- **TypeScript** - Type safety for RTI drafts, questions, and authorities
-- **Vite 8** - Fast local development and bundling
-- **Tailwind CSS v3** - Styling and print media layout
-- **Electron** - Desktop app wrapper
-- **Lucide React** - Icons
-- **Browser localStorage** - Saving drafts on your device
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Electron
+- Browser localStorage
 
----
-
-## How to Run
+## Running Locally
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher)
-- npm (v9 or higher)
+- Node.js (v18 or higher)
+- npm
 
-### Setup
+### 1. Clone and install
 
 ```bash
-# Clone the repository
 git clone https://github.com/Joepvt/RTI.git
-
-# Go into the project directory
 cd RTI
-
-# Install dependencies
 npm install
 ```
 
-### Running the Web Version
+### 2. Run the web version
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open `http://localhost:5173` in your browser.
 
-### Running the Desktop Version
+### 3. Run the desktop version
 
-The Electron app loads the built files from `dist/`, so make sure to build first:
+Build the frontend first, then launch Electron:
 
 ```bash
 npm run build
 npm run electron:start
 ```
 
-### Building for Production
-
-```bash
-npm run build
-```
-
-The compiled files will be saved in the `dist/` directory.
-
----
-
 ## What I Learned
 
-Building this project helped me learn a lot of things outside of textbook exercises:
-- **Managing multi-step forms in React**: Building a step-by-step wizard where user input carries forward between steps and persists across reloads took some trial and error.
-- **TypeScript interfaces**: Defining clear types for drafts, authorities, and form inputs helped prevent bugs where properties were missing.
-- **Electron basics**: Learning how to wrap a Vite React app into a desktop window and set up native application menus.
-- **CSS Print Styles**: Using `@media print` rules so that an on-screen document prints cleanly on A4 paper without ugly scrollbars or cutoffs.
-- **How the RTI Act works**: Reading through Section 6(1) and Section 2(f) taught me that public authorities only provide existing documents, which changed how I designed the drafting logic.
-
----
+Building this helped me learn practical things that I hadn't tried before:
+- Managing multi-step form state in React without losing data between steps.
+- Using TypeScript types for forms, drafts, and authority data so things don't break unexpectedly.
+- How to wrap a Vite and React app into a desktop window using Electron.
+- Using CSS `@media print` rules so a document looks clean when printed on A4 paper.
+- How the RTI Act actually works in practice, especially why Section 2(f) requires asking for existing records instead of asking officers for opinions.
 
 ## Limitations
 
-To be completely honest about what this project can and cannot do:
-- **No automatic government submission**: The app cannot submit the RTI on official portals like `rtionline.gov.in` or state websites. Those portals require personal accounts, OTPs, and online payments. You still need to submit the generated text yourself (online or by Speed Post).
-- **Rule-based drafting**: The app currently uses built-in keyword matching and pre-written templates rather than a live AI model or external API.
-- **Directory is curated**: The authority list covers common central ministries, state departments, and municipal corporations, but it does not have every single local office or village panchayat across India.
-- **Stored locally**: Everything is stored in your browser's `localStorage`. If you clear your browser cache or site data, your saved drafts will be erased.
-
----
+- It does not automatically submit the RTI for you. You still need to submit the generated text yourself on official portals (like `rtionline.gov.in`) or by post.
+- The drafting logic uses built-in keyword matching and templates, not a live AI model.
+- The authority directory is curated and does not have every single local office or village panchayat across India.
+- Government authority information and fees change over time, so they should always be verified independently.
+- Drafts are stored in your browser's localStorage, so clearing your browser data will remove them.
 
 ## Future Ideas
 
-Things I'd like to work on when I have more time:
-- Expand the authority directory to cover more regional and district-level offices.
-- Add support for Indian regional languages (like Hindi, Kannada, Tamil, etc.).
-- Add an optional field where users can bring their own API key (like Gemini) for drafting more custom queries.
-- Add a basic 30-day countdown timer for tracking when an RTI reply is due.
-
----
+- Add more municipal corporations and district-level offices.
+- Add support for regional Indian languages like Hindi, Kannada, and Tamil.
+- Add an optional field where users can add their own API key (like Gemini) to help draft custom queries.
+- Add a simple 30-day response countdown timer.
 
 ## Disclaimer
 
-RTI Easy is an independent educational student project and is **not** affiliated with the Government of India or any state government department.
-
-- It does not file RTIs automatically.
-- It does not collect any government application fees.
-- It does not provide formal legal advice.
-- Always check official government portals (such as [rtionline.gov.in](https://rtionline.gov.in/)) or your local department for current rules, fees, and submission methods.
-
----
+RTI Easy is an independent student project and is not affiliated with the Government of India or any state government. It does not submit applications on your behalf or provide legal advice. Always check official government portals like [rtionline.gov.in](https://rtionline.gov.in/) for official guidelines and fee details.
 
 ## License
 
