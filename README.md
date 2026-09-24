@@ -2,7 +2,14 @@
 
 > **"Ask your government. Without the jargon."**
 
-An independent, educational civic-tech web application that empowers citizens to translate ordinary, everyday questions into clear, structured, and legally actionable Right to Information (RTI) requests.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Electron](https://img.shields.io/badge/Electron-Desktop-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
+An independent, educational civic-tech web & desktop application that empowers citizens to translate ordinary, everyday questions into clear, structured, and legally actionable Right to Information (RTI) requests.
 
 Built as a first-year computer science portfolio project demonstrating modern React & TypeScript development, accessible mobile-first UX design, modular service abstractions, and client-side privacy architecture.
 
@@ -61,11 +68,12 @@ Describe ──▶ Clarify ──▶ Find Authority ──▶ Draft RTI ──�
 
 ## 🛠️ Tech Stack
 
-- **Core**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Frontend Core**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Desktop Runtime**: [Electron](https://www.electronjs.org/)
 - **Build Tool**: [Vite 8](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS v3](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **Storage**: Browser `localStorage` with error-resilient serialization
+- **Storage**: Browser & Electron `localStorage` with resilient serialization
 - **Deployment**: Static build output (`npm run build` -> `dist/`)
 
 ---
@@ -103,6 +111,8 @@ rti-easy/
 │   ├── App.tsx                 # Root application component
 │   ├── index.css               # Tailwind directives and @media print styling
 │   └── main.tsx                # React DOM entry point
+├── electron/
+│   └── main.cjs                # Electron desktop window process
 ├── package.json
 ├── tsconfig.json
 ├── tailwind.config.js
@@ -122,19 +132,28 @@ rti-easy/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/rti-easy.git
+git clone https://github.com/Joepvt/RTI.git
 
 # Navigate to project folder
-cd rti-easy
+cd RTI
 
 # Install dependencies
 npm install
+```
 
-# Start local development server
+### Running the Web Application
+
+```bash
 npm run dev
 ```
 
 Visit `http://localhost:5173` in your browser.
+
+### Running the Desktop Application
+
+```bash
+npm run electron:start
+```
 
 ### Building for Production
 
